@@ -1,3 +1,3 @@
 # Kotlin CRUD
 
-A Sample Koltin CRUD with Spring Boot
+A Sample Kotlin CRUD with Spring Boot
