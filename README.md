@@ -42,8 +42,37 @@ Get All Persons :
 ]
 ```
 
+Get a specific Persons :
+
+`curl "http://localhost:8080/api/persons/1" | jq '.'`
+
+```
+{
+  "id": 1,
+  "name": "Naruto",
+  "level": "Hokage"
+}
+```
+
 POST a Person :
 
 `curl -d '{"name":"Aburame", "level":"Jounin"}' -H "Content-Type: application/json" -X POST http://localhost:8080/api/persons`
 
 Result : `{"id":6,"name":"Aburame","level":"Jounin"}`
+
+PUT / UPDATE a Person :
+
+`curl -d '{"name":"Aburame Shino", "level":"Jounin"}' -H "Content-Type: application/json" -X PUT http://localhost:8080/api/persons/6`
+
+Result :
+```
+{
+  "id": 6,
+  "name": "Aburame Shino",
+  "level": "Jounin"
+}
+```
+DELETE a Person :
+
+`curl -H "Content-Type: application/json" -X DELETE http://localhost:8080/api/persons/6`
+
