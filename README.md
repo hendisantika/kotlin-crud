@@ -10,7 +10,7 @@ Run this project by this command :
 
 Get All Persons :
 
-`curl "http://localhost:8080//api/persons" | jq '.'`
+`curl "http://localhost:8080/api/persons" | jq '.'`
 
 ```
 [
@@ -41,3 +41,9 @@ Get All Persons :
   }
 ]
 ```
+
+POST a Person :
+
+`curl -d '{"name":"Aburame", "level":"Jounin"}' -H "Content-Type: application/json" -X POST http://localhost:8080/api/persons`
+
+Result : `{"id":6,"name":"Aburame","level":"Jounin"}`
